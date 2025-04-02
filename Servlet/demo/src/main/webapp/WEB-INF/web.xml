@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>DenemeServlet</servlet-name>
+        <servlet-class>DenemeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DenemeServlet</servlet-name>
+        <url-pattern>/DenemeServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
