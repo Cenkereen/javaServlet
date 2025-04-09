@@ -23,6 +23,21 @@ public class DenemeServlet extends HttpServlet {
         }
     }
 
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    
+        String action = request.getParameter("action");
+    
+        try {
+            if ("register".equals(action)) registerStudent(request, response);
+            else if ("print".equals(action)) printStudents(request, response);
+            else if ("delete".equals(action)) delStudent(request, response);
+            else if ("update".equals(action)) updateStudent(request, response);
+              
+        } catch (SQLException e) {
+            throw new ServletException("Database error", e);
+        }
+    }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
